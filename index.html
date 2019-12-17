@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML JS CRUD</title>
+        <link rel ="stylesheet" href="style.css">
+    </head>
+    <!-- <body style="background-image: url('Images/1.jpg');"> -->
+<body style="background-image: url('Images/1.jpg');">
+    <h1 style="font-weight: bolder;font-size: xx-large;"><center>Product Management System</center></h1>
+    <center><table style="background: royalblue;">
+            <!-- <img src = "Images/1.jpg"> -->
+        <tr>
+            <td>
+                <!--event.preventDefault() : hides the data in the query string of url
+                autocomplete=off : prevents auto suggestion for textboxes-->
+                <form onsubmit="event.preventDefault();onformSubmit();" autocomplete="off">
+                    <div>
+                        <label><h4>Product ID : </h4></label><label class="validation-error hide" id="ProductIDError">*This Field is required</label>
+                        <input type="number" name="ProductID" id="ProductID">
+                    </div>
+                    <div>
+                        <label><h4>Product Name :</h4> </label><label class="validation-error hide" id="ProductNameError">*This Field is required</label>
+                        <input type="text" name="ProductName" id="ProductName">
+                    </div>
+                    <div>
+                        <label> <h4>Category :</h4> </label><label class="validation-error hide" id="CategoryError">*This Field is required</label>
+                        <input type="text" name="Category" id="Category">
+                    </div>
+                    <div>
+                        <label><h4>Price : </h4></label><label class="validation-error hide" id="PriceError">*This Field is required</label>
+                        <input type="number" name="Price" id="Price">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="list" id="productlist">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</center>
+    <script src ="script.js"></script>
+</body>
+</html>
